@@ -8,7 +8,7 @@
  */
 
  /*jshint browser: true, curly: true, eqeqeq: true, forin: false, immed: false, newcap: true, noempty: true, strict: true, undef: true, devel: true */
-;(function ( $, window, document, undefined ) { 
+;(function ( $, window, document, undefined ) {
 
   'use strict';
 
@@ -53,7 +53,7 @@
 
         this._setupRows(this.element, this.options);
         this._setupColumns(this.element, this.options);
-        
+
       },
 
       _callback: function(elem){
@@ -95,8 +95,8 @@
           var rowEnd = imageIndex + val;
 
           // Wrap each set of images in a row into a container div
-          $images.slice(rowStart, rowEnd).wrapAll('<div class="photoset-row cols-' + val + '"></div>');
-          
+          $images.slice(rowStart, rowEnd).wrapAll('<div class="photoset-row photoset-cols-' + val + '"></div>');
+
           imageIndex = rowEnd;
         });
 
@@ -140,16 +140,16 @@
           }
 
           var $cells = $(elem).find('.photoset-cell');
-          var $cols1 = $(elem).find('.cols-1 .photoset-cell');
-          var $cols2 = $(elem).find('.cols-2 .photoset-cell');
-          var $cols3 = $(elem).find('.cols-3 .photoset-cell');
-          var $cols4 = $(elem).find('.cols-4 .photoset-cell');
-          var $cols5 = $(elem).find('.cols-5 .photoset-cell');
+          var $cols1 = $(elem).find('.photoset-cols-1 .photoset-cell');
+          var $cols2 = $(elem).find('.photoset-cols-2 .photoset-cell');
+          var $cols3 = $(elem).find('.photoset-cols-3 .photoset-cell');
+          var $cols4 = $(elem).find('.photoset-cols-4 .photoset-cell');
+          var $cols5 = $(elem).find('.photoset-cols-5 .photoset-cell');
 
           // Apply styles initial structure styles to the grid
-          $(elem).css({
-            'width': options.width
-          });
+          // $(elem).css({
+          //   'width': options.width
+          // });
           $rows.css({
             'clear': 'left',
             'display': 'block',
@@ -232,14 +232,14 @@
 
               });
               $(elem).attr('data-width', w );
-            } 
+            }
 
           }
           resizePhotosetGrid();
 
           $(window).on("resize", function() {
             resizePhotosetGrid();
-          }); 
+          });
 
         };
 
@@ -266,7 +266,6 @@
           $this._callback(elem);
         }
 
-        
       }
 
     };
@@ -410,7 +409,7 @@
      * Copyright 2012 @louis_remi
      * Licensed under the MIT license.
      *
-     * This saved you an hour of work? 
+     * This saved you an hour of work?
      * Send me music http://www.amazon.co.uk/wishlist/HNTU0468LQON
      */
 
