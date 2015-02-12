@@ -1,9 +1,9 @@
 /**
- * photoset-grid - v1.0.1
- * 2014-04-08
+ * photoset-grid - v1.0.2
+ * 2015-02-12
  * jQuery plugin to arrange images into a flexible grid
  * http://stylehatch.github.com/photoset-grid/
- *
+ * Some modifications not fully tested by Edmundo Junior, please use the original one
  * Copyright 2014 Jonathan Moore - Style Hatch
  */
 
