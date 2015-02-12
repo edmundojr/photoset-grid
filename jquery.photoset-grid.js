@@ -157,7 +157,7 @@
           // Set the width of the cells based on the number of columns in the row
           $cols1.css({ 'width': '100%' });
           $cols2.css({ 'width': '50%' });
-          $cols3.css({ 'width': '33.3%' });
+          $cols3.css({ 'width': '33.333333333%' });
           $cols4.css({ 'width': '25%' });
           $cols5.css({ 'width': '20%' });
 
