@@ -165,11 +165,16 @@
           var gutterVal = parseInt(options.gutter, 10);
           // Apply 50% gutter to left and right
           // this provides equal gutters a high values
-          $(elem).find('.photoset-cell:not(:last-child)').css({
-            'padding-right': (gutterVal / 2) + 'px'
+          $(elem).find('.photoset-cell').css({
+            'padding-right': (gutterVal / 2) + '%'
           });
-          $(elem).find('.photoset-cell:not(:first-child)').css({
-            'padding-left': (gutterVal / 2) + 'px'
+          $(elem).find('.photoset-cell').css({
+            'padding-left': (gutterVal / 2) + '%'
+          });
+          // Remove extra gutter margin
+          $rows.css({
+            'margin-left': -(gutterVal / 2) + '%',
+            'margin-right':  -(gutterVal / 2) + '%'
           });
 
 
