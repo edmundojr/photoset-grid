@@ -1,0 +1,17 @@
+/* Basic Styling */
+
+.photoset-grid img {
+	width: 100%;
+	height: auto;
+}
+
+.photoset-row {
+	overflow: hidden;
+}
+
+.photoset-cell {
+	float: left;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+}

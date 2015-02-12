@@ -146,28 +146,6 @@
           var $cols4 = $(elem).find('.photoset-cols-4 .photoset-cell');
           var $cols5 = $(elem).find('.photoset-cols-5 .photoset-cell');
 
-          // Apply styles initial structure styles to the grid
-          // $(elem).css({
-          //   'width': options.width
-          // });
-          $rows.css({
-            'clear': 'left',
-            'display': 'block',
-            'overflow': 'hidden'
-          });
-          $cells.css({
-            'float': 'left',
-            'display': 'block',
-            'line-height': '0',
-            '-webkit-box-sizing': 'border-box',
-            '-moz-box-sizing': 'border-box',
-            'box-sizing': 'border-box'
-          });
-          $images.css({
-            'width': '100%',
-            'height': 'auto'
-          });
-
           // if the imaged did not have height/width attr set them
           if (waitForImagesLoaded) {
             $images.each(function(){
