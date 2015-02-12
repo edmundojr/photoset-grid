@@ -15,12 +15,6 @@
   // Plugin name and default settings
   var pluginName = "photosetGrid",
     defaults = {
-      // Required
-      // set the width of the container
-      width         : '100%',
-      // the space between the rows / columns
-      gutter        : '0%',
-
       // Optional
       // wrap the images in a vs. div and link to the data-highres images
       highresLinks  : false,
@@ -100,9 +94,9 @@
           imageIndex = rowEnd;
         });
 
-        $(elem).find('.photoset-row:not(:last-child)').css({
-          'margin-bottom': options.gutter
-        });
+        // $(elem).find('.photoset-row:not(:last-child)').css({
+        //   'margin-bottom': options.gutter
+        // });
       },
 
       _setupColumns: function(  elem, options ){
@@ -160,23 +154,6 @@
           $cols3.css({ 'width': '33.333333333%' });
           $cols4.css({ 'width': '25%' });
           $cols5.css({ 'width': '20%' });
-
-
-          var gutterVal = parseInt(options.gutter, 10);
-          // Apply 50% gutter to left and right
-          // this provides equal gutters a high values
-          $(elem).find('.photoset-cell').css({
-            'padding-right': (gutterVal / 2) + '%'
-          });
-          $(elem).find('.photoset-cell').css({
-            'padding-left': (gutterVal / 2) + '%'
-          });
-          // Remove extra gutter margin
-          $rows.css({
-            'margin-left': -(gutterVal / 2) + '%',
-            'margin-right':  -(gutterVal / 2) + '%'
-          });
-
 
           function resizePhotosetGrid(){
 
