@@ -19,7 +19,7 @@
       // set the width of the container
       width         : '100%',
       // the space between the rows / columns
-      gutter        : '0px',
+      gutter        : '0%',
 
       // Optional
       // wrap the images in a vs. div and link to the data-highres images
@@ -196,21 +196,6 @@
                   if(parseInt($img.css('width'), 10) > options.lowresWidth && $img.attr('data-highres')){
                       $img.attr('src', $img.attr('data-highres'));
                   }
-                });
-
-                // Get the row height from the calculated/real height/width of the shortest image
-                var rowHeight = ( $shortestImg.attr('height') * parseInt($shortestImg.css('width'), 10) ) / $shortestImg.attr('width');
-                // Adding a buffer to shave off a few pixels in height
-                var bufferHeight = Math.floor(rowHeight * 0.025);
-                $(this).height( rowHeight - bufferHeight );
-
-                $(this).find('img').each(function(){
-                  // Get the image height from the calculated/real height/width
-                  var imageHeight = ( $(this).attr('height') * parseInt($(this).css('width'), 10) ) / $(this).attr('width');
-                  var marginOffset = ( (rowHeight - imageHeight) * 0.5 ) + 'px';
-                  $(this).css({
-                    'margin-top' : marginOffset
-                  });
                 });
 
               });
