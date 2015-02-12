@@ -1,6 +1,7 @@
-/* Basic Styling */
+/* Photoset Grid, basic styling */
 
 .photoset-grid img {
+	display: block;
 	width: 100%;
 	height: auto;
 }
